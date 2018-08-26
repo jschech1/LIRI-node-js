@@ -1,0 +1,26 @@
+{
+  "name": "LIRI-node-js",
+  "version": "1.0.0",
+  "description": "node_modules .DS_Store .env",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/jschech1/LIRI-node-js.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/jschech1/LIRI-node-js/issues"
+  },
+  "homepage": "https://github.com/jschech1/LIRI-node-js#readme",
+  "dependencies": {
+    "dotenv": "^6.0.0",
+    "node-spotify-api": "^1.0.7",
+    "request": "^2.88.0"
+  },
+  "devDependencies": {}
+}
