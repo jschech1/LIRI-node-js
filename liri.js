@@ -55,8 +55,12 @@ function concert() {
 
             // Parse the body of the site and recover just the imdbRating
             // (Note: The syntax below for parsing isn't obvious. Just spend a few moments dissecting it).
-            console.log(JSON.parse(response[0].venue.name));
+            console.log("Venue: " + JSON.parse(body)[i].venue.name);
+            console.log("Location: " + JSON.parse(body)[i].venue.city + ", " + JSON.parse(body)[i].venue.country);
+            console.log("Event Date: " + moment(body[i].datetime).format("MM/DD/YYYY"));
 
+
+            
         }
     });
 }
@@ -88,6 +92,11 @@ function movie() {
 }
 
 function song() {
+
+    if (!search){
+        search = "The Sign"
+    }
+
     spotify.search({ type: 'track', query: search }, function (err, data) {
         if (err) {
             return console.log('Error occurred: ' + err);
@@ -98,6 +107,8 @@ function song() {
         console.log("Song: " + data.tracks.items[0].name);
         console.log("Preview: " + data.tracks.items[0].preview_url);
         console.log("Album: " + data.tracks.items[0].album.name);
+
+        
 
     });
 }
